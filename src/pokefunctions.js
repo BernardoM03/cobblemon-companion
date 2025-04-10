@@ -1,1 +1,0 @@
-// Cobblemon JSON functions

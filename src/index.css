@@ -18,15 +18,35 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 1px solid white;
   min-height: 100vh;
 }
 
+.page-body {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
 
 .poke-card {
   width: 500px;
   height: 500px;
-  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poke-img {
+  height: 400px;
+  width: 400px;
+}
+
+.search-functions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .poke-search {
@@ -38,6 +58,11 @@
 .poke-search input {
   width: 100%;
   padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  background-color: #1a1a1a;
+  color: #fff;
+  box-sizing: border-box;
 }
 
 .poke-search ul {
@@ -47,15 +72,57 @@
   position: absolute;
   width: 100%;
   border: 1px solid #ccc;
-  background: #fff;
+  background: #242424;
   z-index: 1;
-  max-width: 200px;
+  max-height: 200px;
   overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .poke-search li {
   padding: 1rem;
   cursor: pointer;
-  background-color: #242424;
   width: 100%;
+  color: #fff;
+}
+
+.poke-search li:hover {
+  background-color: #333;
+}
+
+.poke-confirm {
+
+}
+
+.poke-confirm:hover {
+  cursor: pointer;
+}
+
+.info-box {
+  width: 800px;
+  height: 700px;
+  border: 1px solid white;
+}
+
+.info-box {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid white;
+  background-color: #1a1a1a;
+  color: #fff;
+  width: 500px;
+  text-align: left;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-box li {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
 }
