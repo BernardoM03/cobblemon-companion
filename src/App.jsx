@@ -24,7 +24,10 @@ function App() {
   }, [pokeDex, pokeName]);
 
   function openInfoBox() {
-    if (pokeName === "Search Cobblemon") return
+    if (pokeName === "Search Cobblemon") {
+      alert("please select a cobblemon to use")
+      return
+    }
     setInfoBox(prev => !prev)
   }
 
@@ -35,7 +38,7 @@ function App() {
         <div className='search-container'>
           <div className='poke-card'>
             <h2 className='poke-name'>{pokeName}</h2 >
-            <img className='poke-img' src={`https://img.pokemondb.net/sprites/home/normal/${pokeName.toLowerCase()}.png`} />
+            <img className='poke-img' src={`https://img.pokemondb.net/sprites/home/normal/${pokeName.toLowerCase()}.png`} alt={pokeDex && pokeName !== "Search Cobblemon" ? pokeName : ""} />
           </div>
           <div className='search-functions'>
             <PokeSearch pokeDex={pokeDex} pokeName={setPokeName}/>
