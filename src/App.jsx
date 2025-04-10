@@ -33,7 +33,8 @@ function App() {
 
   return (
     <div className='page-content'>
-      <h1 className='header'>Cobblemon Dex</h1>
+      <h1 className='header'>Cobblemon Spawn Helper App</h1>
+      <h3>Find where all available cobblemon can spawn!</h3>
       <div className='page-body'>
         <div className='search-container'>
           <div className='poke-card'>
@@ -52,10 +53,11 @@ function App() {
               <ul>
                 {selectedData.map((entry, index) => (
                   <li key={index} style={{ marginBottom: '1rem' }}>
-                    <strong>Biome(s):</strong> {entry.Biomes || 'Unknown'} <br />
+                    <strong><a href='https://wiki.cobblemon.com/index.php/Pok%C3%A9mon/Spawning/Spawn_Definitions' target='_blank'>Biome(s)</a>:</strong> {entry.Biomes || 'Unknown'} <br />
                     <strong>Time:</strong> {entry.Time || 'Any'} <br />
                     <strong>Weather:</strong> {entry.Weather || 'Any'} <br />
                     <strong>Rarity:</strong> {entry.Bucket || 'Unknown'} <br />
+                    <strong>Multipliers:</strong> {entry.Multipliers || 'None'} <br />
                     <strong>Levels:</strong> {entry["Lv. Min"]} - {entry["Lv. Max"]}
                   </li>
                 ))}
